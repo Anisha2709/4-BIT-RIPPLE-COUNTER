@@ -42,16 +42,16 @@ Program for 4 Bit Ripple Counter and verify its truth table in quartus using Ver
  RegisterNumber: 212224040023
  
 ```
-    module ripple (
-   input clk,     // Clock input
-   input reset,   // Reset input (active high)
-   output [3:0] q // 4-bit output
-   );
+module ripple (
+input clk,     // Clock input
+input reset,   // Reset input (active high)
+output [3:0] q // 4-bit output
+);
   // Internal signals for flip-flops
- reg [3:0] q_int;
+reg [3:0] q_int;
 
   // Assign internal register to output
- assign q = q_int;
+assign q = q_int;
 
 always @(posedge clk or posedge reset) begin
 if (reset) 
